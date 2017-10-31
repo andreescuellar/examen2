@@ -17,21 +17,33 @@
    
 2. Problema 3.
 
-   3.1 Se crea la clase Nodo y sus funciones. 
+   2.1 Se crea la clase Nodo y sus funciones. 
    
    ![](ex2/31.png)
    
-   3.2 Se crea la clase LinkedPositionalList y sus funciones. Aparte se agrega void swap(Position<E> p, Position<E> q) que es la funcion a implementar. 
+   2.2 Se crea la clase LinkedPositionalList y sus funciones. Aparte se agrega void swap(Position<E> p, Position<E> q) que es la funcion a implementar. 
    
    ![](ex2/32.png)
    ![](ex2/33.png)
    
-   3.3 Se crea el Main donde se ejecuta todos los comandos para hacer el swap. 
+   2.3 Se crea el Main donde se ejecuta todos los comandos para hacer el swap. 
    
    ![](ex2/34.png)
    
 3. Problema 4.
-
+       
+   3.1 Se crea la clase Nodo y sus funciones. 
+   
+   ![](ex2/31.png)
+   
+   3.2 Se crea la clase LinkedPositionalList y sus funciones. Aparte se agrega Position<E> positionAtIndex(int i).
+   
+   ![](ex2/32.png)
+   ![](ex2/41.png)
+   
+   3.3 Se crea el Main donde se ejecuta todos los comandos para hacer el index. 
+   
+   ![](ex2/42.png)
    
 4. Problema 5.
 
