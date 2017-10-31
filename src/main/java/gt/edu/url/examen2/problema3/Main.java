@@ -19,21 +19,21 @@ public class Main {
 		
 		
 		Clist.swap(ac1, ac2);
-		String recorrer = null;
+		String recorrido = null;
 		
 		do{
 		            try{
 		                Position<String> tempPos = Clist.first();
-		                recorrer = Clist.remove(tempPos);
-		                System.out.println(recorrer);
+		                recorrido = Clist.remove(tempPos);
+		                System.out.println(recorrido);
 		            }
 		            catch(Exception e){
 		                System.out.println("Los datos ya han sido swicheados");
-		                recorrer =null;
+		                recorrido =null;
 		                break;
 		            }
 		        }
-		while(recorrer != null);  
+		while(recorrido != null);  
 
 	}
 
