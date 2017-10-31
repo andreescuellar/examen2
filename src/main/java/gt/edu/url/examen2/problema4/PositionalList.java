@@ -1,5 +1,9 @@
 package gt.edu.url.examen2.problema4;
-
+/**
+ * 
+ * @author Andrés Cuéllar
+ *
+ */
 public interface PositionalList<E> {
 	int size( );
 	boolean isEmpty( );

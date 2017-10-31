@@ -9,14 +9,14 @@ public class Main {
 	public static void main(String[] args) {
 		LinkedPositionalList<String> Clist = new LinkedPositionalList<>(); 
 		Position<String> ac1,ac2; 
-		ac1 = Clist.addFirst("1"); 
-		ac2 = Clist.addFirst("2"); 
+		ac1 = Clist.addFirst("Carlos"); 
+		ac2 = Clist.addFirst("Andres"); 
 		 
 		
-		
+		System.out.println("--------------------Lista Original-------------------------");		
 		System.out.println(ac1.getElement());
 		System.out.println(ac2.getElement());
-		
+		System.out.println("--------------------Lista Intercambiada-------------------------");		
 		
 		Clist.swap(ac1, ac2);
 		String recorrido = null;

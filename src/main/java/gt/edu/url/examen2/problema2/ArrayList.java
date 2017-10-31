@@ -1,8 +1,13 @@
 package gt.edu.url.examen2.problema2;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
+/**
+ * 
+ * @author Andrés Cuéllar
+ *
+ */
 public class ArrayList<E> implements List<E>, Iterable<E> {
 	
 	/**
@@ -37,7 +42,7 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
 		return new ArrayIterator();
 	}
 
-	public static final int CAPACITY = 16;
+	public static final int CAPACITY = 16; //Capacidad del arreglo 
 	private E[] data;
 	private int size = 0;
 
@@ -49,7 +54,7 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
 		data = (E[]) new Object[capacity];
 	}
 	//tamaño del stack
-	public int size() {
+	public int size() { 
 		return size;
 	}
 	//verificar que el stack no este vacio
@@ -101,6 +106,11 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
 		for (int k=0; k < size; k++)
 			temp[k] = data[k];
 		data = temp;
+	}
+
+	@Override
+	public String toString() {
+		return "ArrayList [data=" + Arrays.toString(data) + "]";
 	}
 
 }

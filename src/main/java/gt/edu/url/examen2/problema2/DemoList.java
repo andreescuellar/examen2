@@ -6,8 +6,9 @@
 package gt.edu.url.examen2.problema2;
 
 /**
+ * 
+ * @author Andrés Cuéllar
  *
- * @author tuxtor
  */
 public interface DemoList {
     List<Integer> crearDemoLista();

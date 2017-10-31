@@ -1,4 +1,4 @@
-package gt.edu.url.examen2.problema3;
+package gt.edu.url.examen2.problema4;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -137,7 +137,7 @@ public class LinkedPositionalList<E> implements PositionalList<E>, Iterable<E> {
 		return position(node.getNext());
 	}
 	
-	//añadir entre dos referencias
+	//agregar entre dos referencias
 	private Position<E> addBetween(E e, Node<E> pred, Node<E> succ) {
 		Node<E> newest = new Node<>(e, pred, succ);
 		succ.setPrev(newest);
@@ -145,32 +145,32 @@ public class LinkedPositionalList<E> implements PositionalList<E>, Iterable<E> {
 		size++;
 		return newest;
 	}
-	//agregar al inicio
+	//agregar primero
 	public Position<E> addFirst(E e) {
 		return addBetween(e, header, header.getNext());
 	}
-	//agregar al final
+	//agregar de ultimo
 	public Position<E> addLast(E e) {
 		return addBetween(e, trailer.getPrev(), trailer);
 	}
-	//añadir antes de una referencia
+	//añadir antes de una referencia 
 	public Position<E> addBefore(Position<E> p, E e) throws IllegalArgumentException{
 		Node<E> node = validate(p);
 		return addBetween(e, node.getPrev(), node);
 	}
-	//añadir luego de una referencia
+	//agregar despues de una referencia
 	public Position<E> addAfter(Position<E> p, E e) throws IllegalArgumentException{ 
 		Node<E> node = validate(p);
 		return addBetween(e, node, node.getNext());
 	}
-	//metodo para poner elemento
+	//incluir elemento 
 	public E set(Position<E> p, E e) throws IllegalArgumentException {
 		Node<E> node = validate(p);
 		E answer = node.getElement();
 		node.setElement(e);
 		return answer;
 	}
-	//metodo para eliminar
+	// eliminar elemento 
 	public E remove(Position<E> p) throws IllegalArgumentException {
 		Node<E> node = validate(p);
 		Node<E> predecessor = node.getPrev();
@@ -184,15 +184,22 @@ public class LinkedPositionalList<E> implements PositionalList<E>, Iterable<E> {
 		node.setPrev(null);
 		return answer;
 	}
-	//Metodo para cambiar la posicion de los elementos.
-	public void swap(Position<E> p, Position<E> q) {
-		Node<E> a1 = validate(p); 
-		Node<E> a2 = validate(q); 
-		E cam1 = a1.getElement(); 
-		E cam2 = a2.getElement();
-		a1.setElement(cam1);
-		a2.setElement(cam2);
+	//metodo para buscar elemento 
+	public Position<E> positionAtIndex(int i) throws IndexOutOfBoundsException {
+		Node top = header.getNext();
+		int lu = 0;
 		
-	}
+		while(top != null)
+		{
+			if(lu == i -1)
+			
+				return top;
+			lu++;
+			top = top.getNext();
+	   }
+		return null;
+		
+			
+	 }
 
 }

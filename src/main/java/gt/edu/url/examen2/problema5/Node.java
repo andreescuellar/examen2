@@ -1,5 +1,11 @@
 package gt.edu.url.examen2.problema5;
+/**
+ * 
+ * @author Andrés Cuéllar
+ *
+ */
 
+//funcion nodo
 public class Node {
 
 public int data;
